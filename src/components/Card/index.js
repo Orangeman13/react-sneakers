@@ -1,7 +1,9 @@
+import styles from "./Card.module.scss";
+
 function Card(props) {
   return (
-    <div className="card">
-      <div className="favorite">
+    <div className={styles.card}>
+      <div className={styles.favorite}>
         <img src="/pictures/sneakers/unliked.svg" alt="unlike" />
       </div>
       <img width={133} height={112} src={props.imageUrl} alt="s1" />
@@ -11,7 +13,7 @@ function Card(props) {
           <p>Цена:</p>
           <b>{props.price} rub.</b>
         </div>
-        <button className="button">
+        <button className="button" onClick={props.onClick}>
           <img width={11} height={11} src="/pictures/plus.svg" alt="+" />
         </button>
       </div>
